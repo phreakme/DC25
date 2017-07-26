@@ -1,0 +1,295 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Calibri;\f1\fswiss\fcharset0 ArialMT;\f2\froman\fcharset0 TimesNewRomanPSMT;
+\f3\fnil\fcharset0 Cambria;}
+{\colortbl;\red255\green255\blue255;\red23\green54\blue93;\red52\green90\blue138;\red34\green34\blue34;
+\red79\green129\blue189;\red0\green134\blue229;\red36\green41\blue46;\red51\green51\blue51;}
+{\*\expandedcolortbl;;\csgenericrgb\c9020\c21176\c36471;\csgenericrgb\c20392\c35294\c54118;\csgenericrgb\c13333\c13333\c13333;
+\csgenericrgb\c30980\c50588\c74118;\csgenericrgb\c0\c52549\c89804;\csgenericrgb\c14118\c16078\c18039;\csgenericrgb\c20000\c20000\c20000;}
+\vieww12840\viewh16440\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sa300\partightenfactor0
+
+\f0\b\fs52 \cf2 \kerning1\expnd1\expndtw5
+RTFM - VoIP\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\fs32 \cf3 \kerning1\expnd1\expndtw5
+Important Ports\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+\
+esip\'a0\'a0 \'a0		2950/udp	# ESIP\uc0\u8232 rsip			4555/tcp	# RSIP Port\u8232 sip			5060/sctp	# Session Initiation Protocol (SIP)\u8232 sip\'a0\'a0 \'a0			5060/tcp	# Session Initiation Protocol (SIP)\u8232 sip\'a0\'a0			5060/udp	# Session Initiation Protocol (SIP)\u8232 sip-tls\'a0\'a0 \'a0		5061/sctp	# SIP-TLS\u8232 sip-tls\'a0\'a0 \'a0		5061/tcp	# SIP-TLS\u8232 sip-tls\'a0\'a0 \'a0		5061/udp	# SIP-TLS\
+\
+h323hostcallsc	1300/tcp\'a0	# H323 Host Call Secure\uc0\u8232 h323hostcallsc\'a0\'a0 \'a0	1300/udp\'a0	# H323 Host Call Secure\u8232 h323gatedis		1718/tcp\'a0\'a0 \
+h323gatestat\'a0\'a0 \'a0	1719/tcp\
+h323gatestat\'a0\'a0 \'a0	1719/udp	# H.323 Gatestat\uc0\u8232 h323callsigalt\'a0\'a0 \'a0	11720/udp\'a0	# h323 Call Signal Alternate\
+\
+IAX: 4569\
+AMI: 5038\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+Nmap\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\fs26 \cf5 \kerning1\expnd1\expndtw5
+nselib
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+sip.lua, iax2.lua,stun.lua\
+xmpp.lua\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+scripts
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+sip-brute.nse, sip-call-spoof.nse, sip-enum-users.nse, sip-methods.nse\uc0\u8232 iax2-brute.nse, iax2-version.nse\
+tftp-enum..nse\
+xmpp-brute.nse\
+xmpp-info.nse\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+MetaSploit
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f3\b0\fs24 \cf0 \kerning1\expnd1\expndtw5
+auxiliary/scanner/h323/h323_version
+\f2 \cf3 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1 \cf4 \kerning1\expnd1\expndtw5
+auxiliary/scanner/sip/enumerator\
+auxiliary/scanner/sip/enumerator_tcp\
+auxiliary/scanner/sip/options\
+auxiliary/scanner/sip/options_tcp\
+auxiliary/scanner/sip/sipdroid_ext_enumuse auxiliary/voip/asterisk_login\
+auxiliary/voip/cisco_cucdm_call_forward\
+auxiliary/voip/cisco_cucdm_speed_dials\
+auxiliary/voip/sip_deregister\
+auxiliary/voip/sip_invite_spoof\
+auxiliary/voip/telisca_ips_lock_control\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+Asterisk\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\fs26 \cf5 \kerning1\expnd1\expndtw5
+Important Dirs:
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+Config:\'a0\'a0\'a0\'a0\'a0 /etc/asterisk/\
+Spool:\'a0\'a0\'a0\'a0\'a0\'a0 /var/spool/asterisk\
+\pard\pardeftab720\li720\fi720\ri0\partightenfactor0
+\cf4 \kerning1\expnd1\expndtw5
+monitor\
+outgoing\
+voicemail\
+\pard\pardeftab720\ri0\partightenfactor0
+\cf4 \kerning1\expnd1\expndtw5
+Logs:\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0/var/log/asterisk\
+Agi-Bin\'a0\'a0\'a0\'a0 /usr/share/asterisk/agi-bin\
+Sounds\'a0\'a0\'a0 /usr/share/asterisk/sounds\
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+Config Files:\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+asterisk.conf\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 -> All Directories defined\
+sip.conf\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 -> Registrations, Peers, Friends | codecs\
+extensions.conf\'a0\'a0\'a0\'a0 -> DialPlan\
+modules.conf\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 -> Defined Modules\
+voicemali.conf\'a0\'a0\'a0\'a0\'a0\'a0 -> extension => Pass,Name,Email,<options>\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+Commands\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\fs24 \cf4 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0 \cf5 \kerning1\expnd1\expndtw5
+Core\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf4 \kerning1\expnd1\expndtw5
+core show help [topic]\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0 When called with a topic as an argument, displays usage\u8232 \'a0\'a0\'a0\'a0\'a0\'a0 information on the given command. If called without a\u8232 \'a0\'a0\'a0\'a0\'a0\'a0 topic, it provides a list of commands.\
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b \cf5 \kerning1\expnd1\expndtw5
+sip\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf4 \kerning1\expnd1\expndtw5
+notify\'a0\'a0\'a0\'a0\'a0 prune\'a0\'a0\'a0\'a0\'a0\'a0 qualify\'a0\'a0\'a0\'a0 reload\'a0\'a0\'a0\'a0\'a0 set\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 show\'a0\'a0\'a0\'a0\'a0\'a0\'a0 unregister\
+\
+sip show \{channels|subscriptio List active SIP channels or subscriptions\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show channelstats List statistics for active SIP channels\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show channel Show detailed SIP channel info\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show domains List our local SIP domains\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show history Show SIP dialog history\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show inuse List all inuse/limits\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show mwi Show MWI subscriptions\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show objects List all SIP object allocations\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show peers List defined SIP peers\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show peer Show details on specific SIP peer\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show registry List SIP registration status\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show sched Present a report on the status of the scheduler queue\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show settings Show SIP global settings\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show tcp List TCP Connections\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show users List defined SIP users\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 sip show user Show details on specific SIP user\
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b \cf5 \kerning1\expnd1\expndtw5
+dialplan\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf4 \kerning1\expnd1\expndtw5
+add\'a0\'a0\'a0\'a0 debug\'a0\'a0 reload\'a0 remove\'a0 save\'a0\'a0\'a0 set\'a0\'a0\'a0\'a0 show\
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b \cf5 \kerning1\expnd1\expndtw5
+console\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf4 \kerning1\expnd1\expndtw5
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console answer - Answer an incoming console call\uc0\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console dial - Dial an extension on the console\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console flash - Flash a call on the console\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console hangup - Hangup a call on the console\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console \{mute|unmute\} [toggle] Disable/Enable mic input\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console send text - Send text to the remote device\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console transfer - Transfer a call to a different extension\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console \{device\}\'a0- Generic console command\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console \{set|show\} autoanswer\'a0- Sets/displays autoanswer\u8232 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 console \{set|show\} active [<de Sets/displays active console\
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b \cf5 \kerning1\expnd1\expndtw5
+Agi\'a0Reference:\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0 \cf4 \kerning1\expnd1\expndtw5
+\'a0 \'a0 \'a0{\field{\*\fldinst{HYPERLINK "https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+AGI+Commands"}}{\fldrslt \cf6 \kerning1\expnd1\expndtw5
+\ul \ulc6 https://wiki.asterisk.org/wiki/display/AST/Asterisk+13+AGI+Commands}}\
+http://phpagi.sourceforge.net/phpagi22/api-docs/\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+Viproy\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+http://www.viproy.com/\
+https://github.com/fozavci/viproy-voipkit/blob/master/SIPUSAGE.md\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+SipVicious
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f3\b0\fs24 \cf0 \kerning1\expnd1\expndtw5
+https://github.com/EnableSecurity/sipvicious/blob/master/README.md
+\f2 \kerning1\expnd1\expndtw5
+\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+svmap\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs20 \cf7 \kerning1\expnd1\expndtw5
+this is a sip scanner. When launched against ranges of ip address space, it will identify any SIP servers  which it finds on the way. Also has the option to scan hosts on ranges of ports. \
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+svwar\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs20 \cf7 \kerning1\expnd1\expndtw5
+identifies working extension lines on a PBX. A working extension is one that can be registered.  Also tells you if the extension line requires authentication or not.  \
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+svcrack\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs20 \cf7 \kerning1\expnd1\expndtw5
+a password cracker making use of digest authentication.  It is able to crack passwords on both registrar servers and proxy servers. Current cracking modes are either numeric ranges or words from dictionary files. \
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+svreport\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs20 \cf7 \kerning1\expnd1\expndtw5
+able to manage sessions created by the rest of the tools and export to pdf, xml, csv and plain text. \
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+svcrash\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs20 \cf7 \kerning1\expnd1\expndtw5
+responds to svwar and svcrack SIP messages with a message that causes old versions to crash. \
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+Sipcrack\
+\pard\tx916\tx1832\tx2748\tx3664\tx4580\tx5496\tx6412\tx7328\tx8244\tx9160\tx10076\tx10992\tx11908\tx12824\tx13740\tx14656\pardeftab720\ri0\sl240\partightenfactor0
+
+\f1\b0\fs18 \cf8 \kerning1\expnd1\expndtw5
+       sipdump -i eth0 logins.dump        sipcrack -w mywordlist.txt logins.dump\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+SipSak\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+sipsak -M -B "<payload>" -s <sipuri> # send a sip message to sip URI\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+DTMF\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\fs26 \cf5 \kerning1\expnd1\expndtw5
+Generate\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+gen -t wav -d "<characters>" <file>.wav; part of multimon\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.perlmonks.org/?node_id=237578"}}{\fldrslt \cf6 \kerning1\expnd1\expndtw5
+\ul \ulc6 http://www.perlmonks.org/?node_id=237578\'a0}}; perl\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://onlinetonegenerator.com/dtmf.html"}}{\fldrslt \cf6 \kerning1\expnd1\expndtw5
+\ul \ulc6 http://onlinetonegenerator.com/dtmf.html}}\'a0; javascript\
+\pard\pardeftab720\fi720\ri0\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/zeyus/Python3BlueBox"}}{\fldrslt \cf6 \kerning1\expnd1\expndtw5
+\ul \ulc6 https://github.com/zeyus/Python3BlueBox}}\'a0; python\
+audacity\
+\pard\pardeftab720\ri0\sb200\partightenfactor0
+
+\f0\b\fs26 \cf5 \kerning1\expnd1\expndtw5
+Decode\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+multimon -t wav -a dtmf <file.wav>\
+\pard\pardeftab720\ri0\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://dialabc.com/sound/detect/index.html"}}{\fldrslt \cf6 \kerning1\expnd1\expndtw5
+\ul \ulc6 http://dialabc.com/sound/detect/index.html}}\
+\pard\pardeftab720\ri0\sb480\partightenfactor0
+
+\f0\b\fs32 \cf3 \kerning1\expnd1\expndtw5
+More Tools and Resources:\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f1\b0\fs24 \cf4 \kerning1\expnd1\expndtw5
+https://voipsa.org/Resources/tools.php\
+}
